@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Music, Youtube, Music2, Apple, Radio } from "lucide-react";
+import { Music, Youtube, Music2, Apple } from "lucide-react";
 
 interface Link {
   id: string;
@@ -15,7 +15,7 @@ export default function Home() {
     {
       id: "youtube",
       title: "YouTube",
-      url: "#",
+      url: "https://www.youtube.com/watch?v=DDgzMvgweEg&list=RDDDgzMvgweEg&start_radio=1",
       icon: <Youtube className="w-6 h-6" />,
       color: "from-red-600 to-red-700",
       hoverColor: "hover:from-red-700 hover:to-red-800",
@@ -23,7 +23,7 @@ export default function Home() {
     {
       id: "spotify",
       title: "Spotify",
-      url: "#",
+      url: "https://open.spotify.com/intl-pt/track/2rtju9I726vEcTAsTBaqO8?si=698e2a23e42b48a8",
       icon: <Music2 className="w-6 h-6" />,
       color: "from-green-600 to-green-700",
       hoverColor: "hover:from-green-700 hover:to-green-800",
@@ -31,7 +31,7 @@ export default function Home() {
     {
       id: "apple",
       title: "Apple Music",
-      url: "#",
+      url: "https://music.apple.com/br/album/let-me-be-afro-house-remix-single/6768119149",
       icon: <Apple className="w-6 h-6" />,
       color: "from-gray-700 to-gray-800",
       hoverColor: "hover:from-gray-800 hover:to-gray-900",
@@ -39,18 +39,10 @@ export default function Home() {
     {
       id: "deezer",
       title: "Deezer",
-      url: "#",
+      url: "https://link.deezer.com/s/33i00LTskdmG2mjTEASK4",
       icon: <Music className="w-6 h-6" />,
       color: "from-orange-600 to-orange-700",
       hoverColor: "hover:from-orange-700 hover:to-orange-800",
-    },
-    {
-      id: "soundcloud",
-      title: "SoundCloud",
-      url: "#",
-      icon: <Music className="w-6 h-6" />,
-      color: "from-amber-600 to-amber-700",
-      hoverColor: "hover:from-amber-700 hover:to-amber-800",
     },
   ]);
 
@@ -87,6 +79,8 @@ export default function Home() {
             <a
               key={link.id}
               href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`
                 group relative w-full
                 bg-gradient-to-r ${link.color} ${link.hoverColor}
